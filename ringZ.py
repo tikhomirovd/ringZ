@@ -20,7 +20,7 @@ class Zn(object):
         MMI = lambda x, n, s=1, t=0, N=0: (n < 2 and t % N or MMI(n, x % n, t, s - x // n * t, N or n), -1)[n < 1]
         return MMI(n, x % n, t, s - x // n * t, N or n)
 
-    def div(self, x, y):
+    def divZ(self, x, y):
         if self.search_inverse(y) != -1:
             return self.modZ(x * self.search_inverse(y))
         else:
